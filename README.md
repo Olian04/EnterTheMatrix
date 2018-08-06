@@ -8,5 +8,5 @@ I made this because i like to include this effect as an easter egg in most of my
 
 ## Install
 ```html
-<script src="https://cdn.rawgit.com/Olian04/EnterTheMatrix/b6034dcb/EnterTheMatrix.js"></script>
+<script src="https://cdn.rawgit.com/Olian04/EnterTheMatrix/50dd408f/EnterTheMatrix.js"></script>
 ```
