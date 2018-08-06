@@ -1,12 +1,16 @@
 var canvas = document.createElement('canvas');
+document.body.appendChild(canvas);
+var intervalId;
 window.EnterTheMatrix = function () {
     canvas.style.display = 'none';
-    document.body.appendChild(canvas);
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight;
     let p = Array(256).join(1).split('');
     var ctx = canvas.getContext("2d");
-    setInterval(function () {
+    if (intervalId) {
+        clearInterval(intervalId);
+    }
+    intervalId = setInterval(function () {
         ctx.fillStyle = "rgba(0,0,0,0.05)";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = "rgba(0,255,0,1)";
@@ -21,27 +25,27 @@ window.EnterTheMatrix = function () {
     }, 33);
     window.addEventListener('resize', resize);
     function resize() {
-      if (document.isFullScreen 
+        if (document.isFullScreen 
         || document.mozRequestIsFullScreen 
         || document.webkitIsFullScreen 
         || document.msIsFullscreen) {
         canvas.style.display = 'inline';
-      } else {
+        } else {
         canvas.style.display = 'none';
-      }
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight;
-      p = Array(256).join(1).split('');
-      ctx.fillStyle = "rgba(0,0,0,1)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight;
+        p = Array(256).join(1).split('');
+        ctx.fillStyle = "rgba(0,0,0,1)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
     if (canvas.requestFullscreen) {
-      canvas.requestFullscreen();
+        canvas.requestFullscreen();
     } else if (canvas.mozRequestFullScreen) { /* Firefox */
-      canvas.mozRequestFullScreen();
+        canvas.mozRequestFullScreen();
     } else if (canvas.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-      canvas.webkitRequestFullscreen();
+        canvas.webkitRequestFullscreen();
     } else if (canvas.msRequestFullscreen) { /* IE/Edge */
-      canvas.msRequestFullscreen();
+        canvas.msRequestFullscreen();
     }
-  }
+}
