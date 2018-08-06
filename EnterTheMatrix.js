@@ -1,5 +1,6 @@
 var canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
+canvas.style.display = 'none';
 var intervalId;
 window.EnterTheMatrix = function () {
     canvas.style.display = 'none';
