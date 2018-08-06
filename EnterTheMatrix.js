@@ -1,12 +1,12 @@
 var canvas = document.createElement('canvas');
-document.body.appendChild(canvas);
 canvas.style.display = 'none';
+document.body.appendChild(canvas);
 var intervalId;
 window.EnterTheMatrix = function () {
     canvas.style.display = 'none';
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight;
-    let p = Array(256).join(1).split('');
+    var p = Array(256).join(1).split('');
     var ctx = canvas.getContext("2d");
     if (intervalId) {
         clearInterval(intervalId);
