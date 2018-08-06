@@ -26,12 +26,15 @@ window.EnterTheMatrix = function () {
     window.addEventListener('resize', resize);
     function resize() {
         if (document.isFullScreen 
-        || document.mozRequestIsFullScreen 
-        || document.webkitIsFullScreen 
-        || document.msIsFullscreen) {
-        canvas.style.display = 'inline';
+          || document.mozRequestIsFullScreen 
+          || document.webkitIsFullScreen 
+          || document.msIsFullscreen) {
+          canvas.style.display = 'inline';
         } else {
-        canvas.style.display = 'none';
+          if (intervalId) {
+           clearInterval(intervalId);
+          }
+          canvas.style.display = 'none';
         }
         canvas.width = window.innerWidth
         canvas.height = window.innerHeight;
