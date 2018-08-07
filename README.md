@@ -1,6 +1,6 @@
 # EnterTheMatrix
 
-![demo gif](matrix-effect-demo.gif)
+[![demo gif](matrix-effect-demo.gif)](https://olian04.github.io/EnterTheMatrix/)
 
 Small silly project that adds a function called `EnterTheMatrix` to the window object. Calling this method will fullscreen a "matrix" effect (like in the movie).
 
