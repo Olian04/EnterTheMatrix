@@ -8,7 +8,7 @@ I made this because i like to include this effect as an easter egg in most of my
 
 [Demo](https://olian04.github.io/EnterTheMatrix/)
 
-## Install
 ```html
+<button onclick="EnterTheMatrix()">Enter the matrix</button>
 <script src="https://cdn.rawgit.com/Olian04/EnterTheMatrix/dade462a/EnterTheMatrix.js"></script>
 ```
